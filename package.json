@@ -1,0 +1,20 @@
+{
+  "name": "howard-ghl-stripe-integration",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000h\u0000o\u0000w\u0000a\u0000r\u0000d\u0000-\u0000G\u0000H\u0000L\u0000-\u0000S\u0000t\u0000r\u0000i\u0000p\u0000e\u0000_\u0000i\u0000n\u0000t\u0000e\u0000g\u0000r\u0000a\u0000t\u0000i\u0000o\u0000n\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.9.0",
+    "body-parser": "^2.2.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "stripe": "^18.0.0"
+  }
+}

@@ -50,12 +50,21 @@ app.post('/webhook', async (req, res) => {
     }
 
     const contactData = {
-      firstName: customerName,
+      firstName: customerName || 'Guest',
       email: customerEmail,
       phone: customerPhone,
+    
+      
+      address1: charge.billing_details?.address?.line1 || '',
+      city: charge.billing_details?.address?.city || '',
+      state: charge.billing_details?.address?.state || '',
+      postal_code: charge.billing_details?.address?.postal_code || '',
+      country: charge.billing_details?.address?.country || '',
+    
       tags: ['Stripe Payment', 'Webhook Lead'],
       source: 'Stripe Webhook'
     };
+    
 
     const ghlRes = await axios.post('https://rest.gohighlevel.com/v1/contacts/', contactData, {
       headers: {
